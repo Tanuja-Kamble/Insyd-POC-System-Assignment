@@ -1,0 +1,50 @@
+### Create a new User
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+  "username": "John Doe",
+  "email": "john@example.com"
+}
+
+###
+
+### Get all Users
+GET http://localhost:5000/api/users
+
+###
+
+### Create Event
+POST http://localhost:5000/api/events
+Content-Type: application/json
+
+{
+  "type": "NEW_PROJECT",
+  "payload": {
+    "title": "Skyline Tower",
+    "description": "New architecture project launched"
+  }
+}
+
+###
+
+### Get all Events
+GET http://localhost:5000/api/events
+
+###
+
+### Create Notification
+POST http://localhost:5000/api/notifications
+Content-Type: application/json
+
+{
+  "userId": "64e5b3cfa0d9d23c01a1b2c3",
+  "message": "Your post has a new comment!",
+  "type": "info"
+}
+
+
+###
+
+### Get Notifications for a User
+GET http://localhost:5000/api/notifications/REPLACE_WITH_USER_ID
